@@ -12,6 +12,7 @@
 		354DD2132631FCC100311490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354DD2112631FCC100311490 /* Main.storyboard */; };
 		354DD2152631FCC200311490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354DD2142631FCC200311490 /* Assets.xcassets */; };
 		354DD2182631FCC200311490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354DD2162631FCC200311490 /* LaunchScreen.storyboard */; };
+		354DD23026331A7500311490 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354DD22F26331A7500311490 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		354DD2142631FCC200311490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		354DD2172631FCC200311490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		354DD2192631FCC200311490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354DD22F26331A7500311490 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +56,13 @@
 		354DD20A2631FCC100311490 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				354DD2192631FCC200311490 /* Info.plist */,
 				354DD20B2631FCC100311490 /* AppDelegate.swift */,
 				354DD20D2631FCC100311490 /* SceneDelegate.swift */,
-				354DD2112631FCC100311490 /* Main.storyboard */,
+				354DD22F26331A7500311490 /* ToDo.swift */,
 				354DD2142631FCC200311490 /* Assets.xcassets */,
 				354DD2162631FCC200311490 /* LaunchScreen.storyboard */,
-				354DD2192631FCC200311490 /* Info.plist */,
+				354DD2112631FCC100311490 /* Main.storyboard */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354DD23026331A7500311490 /* ToDo.swift in Sources */,
 				354DD20C2631FCC100311490 /* AppDelegate.swift in Sources */,
 				354DD20E2631FCC100311490 /* SceneDelegate.swift in Sources */,
 			);
