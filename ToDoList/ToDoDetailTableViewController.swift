@@ -19,6 +19,10 @@ class ToDoDetailTableViewController: UITableViewController {
         updateSaveButtonState()
     }
     
+    @IBAction func returnPressed(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
