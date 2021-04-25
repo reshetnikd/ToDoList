@@ -23,6 +23,10 @@ class ToDoDetailTableViewController: UITableViewController {
         sender.resignFirstResponder()
     }
     
+    @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
+        isCompleteButton.isSelected.toggle()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
