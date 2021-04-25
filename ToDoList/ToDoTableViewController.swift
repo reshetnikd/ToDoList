@@ -18,6 +18,12 @@ class ToDoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        if let savedToDos = ToDo.loadToDos() {
+            todos = savedToDos
+        } else {
+            todos = ToDo.loadSampleToDos()
+        }
     }
 
     // MARK: - Table view data source
