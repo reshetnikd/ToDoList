@@ -27,6 +27,10 @@ class ToDoDetailTableViewController: UITableViewController {
         isCompleteButton.isSelected.toggle()
     }
     
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        updateDueDateLabel(date: sender.date)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,11 +40,16 @@ class ToDoDetailTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         updateSaveButtonState()
+        updateDueDateLabel(date: dueDatePickerView.date)
     }
     
     func updateSaveButtonState() {
         let shouldEnableSaveButton = titleTextField.text?.isEmpty == false
         saveButton.isEnabled = shouldEnableSaveButton
+    }
+    
+    func updateDueDateLabel(date: Date) {
+        dueDateLabel.text = ToDo.dueDateFormatter.string(from: date)
     }
 
     // MARK: - Table view data source
