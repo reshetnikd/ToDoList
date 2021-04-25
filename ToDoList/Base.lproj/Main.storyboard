@@ -61,30 +61,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="YyU-i6-5Gf">
+                            <tableViewSection headerTitle="Basic Information" id="YyU-i6-5Gf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qbc-eA-Kjo">
-                                        <rect key="frame" x="0.0" y="18" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qbc-eA-Kjo" id="r5U-HJ-kQE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zAM-rE-jmq">
-                                        <rect key="frame" x="0.0" y="61.666667938232422" width="375" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zAM-rE-jmq" id="ENG-B4-qBP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sqa-Ut-vcT">
-                                        <rect key="frame" x="0.0" y="105.33333587646484" width="375" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sqa-Ut-vcT" id="7nY-4K-TT9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfX-dw-9uX">
+                                                    <rect key="frame" x="16" y="8.3333333333333339" width="28" height="27.333333333333329"/>
+                                                    <state key="normal" image="circle" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                    </state>
+                                                    <state key="selected" image="checkmark.circle.fill" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                    </state>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Remind me to..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCl-eN-Uyw">
+                                                    <rect key="frame" x="52" y="5" width="307" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jCl-eN-Uyw" firstAttribute="leading" secondItem="yfX-dw-9uX" secondAttribute="trailing" constant="8" symbolic="YES" id="TVA-a7-cs6"/>
+                                                <constraint firstItem="jCl-eN-Uyw" firstAttribute="centerY" secondItem="r5U-HJ-kQE" secondAttribute="centerY" id="dtn-AR-66D"/>
+                                                <constraint firstItem="yfX-dw-9uX" firstAttribute="centerY" secondItem="r5U-HJ-kQE" secondAttribute="centerY" id="eba-58-3OR"/>
+                                                <constraint firstAttribute="trailing" secondItem="jCl-eN-Uyw" secondAttribute="trailing" constant="16" id="vcv-UK-PxA"/>
+                                                <constraint firstItem="yfX-dw-9uX" firstAttribute="leading" secondItem="r5U-HJ-kQE" secondAttribute="leading" constant="16" id="veu-rJ-IqU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -111,7 +118,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xh3-A7-xb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Wpp-It-U9v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="55"/>
+            <point key="canvasLocation" x="2100" y="54.679802955665025"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iGc-d8-0dg">
@@ -147,6 +154,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
