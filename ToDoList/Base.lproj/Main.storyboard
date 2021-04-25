@@ -40,6 +40,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My To-Do's" id="aGc-QZ-9bJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Uep-gS-tvn"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0v4-UO-Fcb">
                             <connections>
                                 <segue destination="8Wi-zW-b1D" kind="presentation" id="D1L-XN-7Sz"/>
