@@ -39,8 +39,9 @@ class ToDoDetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        updateSaveButtonState()
+        dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
         updateDueDateLabel(date: dueDatePickerView.date)
+        updateSaveButtonState()
     }
     
     func updateSaveButtonState() {
