@@ -13,6 +13,11 @@ class ToDoDetailTableViewController: UITableViewController {
     @IBOutlet var dueDateLabel: UILabel!
     @IBOutlet var dueDatePickerView: UIDatePicker!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet var saveButton: UIBarButtonItem!
+    
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        updateSaveButtonState()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +27,12 @@ class ToDoDetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        updateSaveButtonState()
+    }
+    
+    func updateSaveButtonState() {
+        let shouldEnableSaveButton = titleTextField.text?.isEmpty == false
+        saveButton.isEnabled = shouldEnableSaveButton
     }
 
     // MARK: - Table view data source
