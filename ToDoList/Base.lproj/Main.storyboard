@@ -55,7 +55,7 @@
         <!--New To-Do-->
         <scene sceneID="2xI-iJ-TBt">
             <objects>
-                <tableViewController id="Kx1-R1-6N2" sceneMemberID="viewController">
+                <tableViewController id="Kx1-R1-6N2" customClass="ToDoDetailTableViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="5Ht-Dw-st3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,7 +130,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="3as-IV-Z4D">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="342"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="341.66666666666669"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -188,6 +188,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueDateLabel" destination="heD-jD-hAa" id="aWH-fk-iyM"/>
+                        <outlet property="dueDatePickerView" destination="3as-IV-Z4D" id="VC0-3l-uYe"/>
+                        <outlet property="isCompleteButton" destination="yfX-dw-9uX" id="N9d-TL-U49"/>
+                        <outlet property="notesTextView" destination="FZ1-kw-v58" id="kvi-do-O3W"/>
+                        <outlet property="titleTextField" destination="jCl-eN-Uyw" id="EHR-Xf-LG0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xh3-A7-xb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Wpp-It-U9v" userLabel="Exit" sceneMemberID="exit"/>
