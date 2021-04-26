@@ -42,7 +42,20 @@ class ToDoTableViewController: UITableViewController {
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
-
+    
+    @IBSegueAction func editToDo(_ coder: NSCoder, sender: Any?) -> ToDoDetailTableViewController? {
+        guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else {
+            return nil
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detailController = ToDoDetailTableViewController(coder: coder)
+        detailController?.todo = todos[indexPath.row]
+        
+        return detailController
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
