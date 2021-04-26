@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ToDoTableViewController: UITableViewController {
+class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
     var todos = [ToDo]()
 
     override func viewDidLoad() {
@@ -80,6 +80,7 @@ class ToDoTableViewController: UITableViewController {
         let todo = todos[indexPath.row]
         cell.titleLabel?.text = todo.title
         cell.isCompleteButton.isSelected = todo.isComplete
+        cell.delegate = self
 
         return cell
     }
@@ -121,5 +122,14 @@ class ToDoTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func checkmarkTapped(sender: ToDoCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            var todo = todos[indexPath.row]
+            todo.isComplete.toggle()
+            todos[indexPath.row] = todo
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
 
 }
