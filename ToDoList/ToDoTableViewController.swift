@@ -36,10 +36,18 @@ class ToDoTableViewController: UITableViewController {
         let sourceViewController = segue.source as! ToDoDetailTableViewController
         
         if let todo = sourceViewController.todo {
-            let newIndexPath = IndexPath(row: todos.count, section: 0)
-            
-            todos.append(todo)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                todos[selectedIndexPath.row] = todo
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+//            if let indexOfExistingTodo = todos.firstIndex(of: todo) {
+//                todos[indexOfExistingTodo] = todo
+//                tableView.reloadRows(at: [IndexPath(row: indexOfExistingTodo, section: 0)], with: .automatic)
+            } else {
+                let newIndexPath = IndexPath(row: todos.count, section: 0)
+                
+                todos.append(todo)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
         }
     }
     
@@ -48,7 +56,7 @@ class ToDoTableViewController: UITableViewController {
             return nil
         }
         
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
         
         let detailController = ToDoDetailTableViewController(coder: coder)
         detailController?.todo = todos[indexPath.row]
