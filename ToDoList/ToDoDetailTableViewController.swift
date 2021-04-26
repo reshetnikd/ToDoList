@@ -31,6 +31,7 @@ class ToDoDetailTableViewController: UITableViewController {
         updateDueDateLabel(date: sender.date)
     }
     
+    var todo: ToDo?
     var isDatePickerHidden = true
     let dateLabelIndexPath = IndexPath(row: 0, section: 1)
     let datePickerIndexPath = IndexPath(row: 1, section: 1)
@@ -154,6 +155,8 @@ class ToDoDetailTableViewController: UITableViewController {
         let isComplete = isCompleteButton.isSelected
         let dueDate = dueDatePickerView.date
         let notes = notesTextView.text
+        
+        todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
     }
 
 }
