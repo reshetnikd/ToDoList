@@ -8,7 +8,7 @@
 import Foundation
 
 struct ToDo: Equatable, Codable {
-    let id = UUID()
+    var id = UUID()
     var title: String
     var isComplete: Bool
     var dueDate: Date
